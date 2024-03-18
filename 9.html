@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Areeb Ali</title>
+</head>
+<body>
+
+<script>
+    // 1. Declare an empty array using JS literal notation:
+    let futureStudentNamesLiteral = [];
+
+    // 2. Declare an empty array using JS object notation:
+    let futureStudentNamesObject = new Array();
+
+    // 3. Declare and initialize a strings array:
+    let stringsArray = ["apple", "banana", "orange"];
+
+    // 4. Declare and initialize a numbers array:
+    let numbersArray = [1, 2, 3, 4, 5];
+
+    // 5. Declare and initialize a boolean array:
+    let booleanArray = [true, false, true, true];
+
+    // 6. Declare and initialize a mixed array:
+    let mixedArray = ["apple", 123, true, "orange", 45.67];
+
+    // 7. Declare and Initialize an array for education qualifications:
+    let educationQualifications = ["SSC", "HSC", "BCS", "BS", "BCOM", "MS", "M. Phil.", "PhD"];
+
+    // Display the listed qualifications
+    document.write("<p>Educational Qualifications:</p>");
+    document.write("<ul>");
+    for (let qualification of educationQualifications) {
+        document.write("<li>" + qualification + "</li>");
+    }
+    document.write("</ul>");
+
+    // 8. Write a program to store 3 student names and their scores:
+    let studentNames = ["John", "Jane", "Bob"];
+    let scores = [450, 480, 490];
+
+    for (let i = 0; i < studentNames.length; i++) {
+        let percentage = (scores[i] / 500) * 100;
+        document.write(studentNames[i] + " scored " + scores[i] + " out of 500. Percentage: " + percentage.toFixed(2) + "%<br>");
+    }
+
+    // 9. Initialize an array with color names and perform various operations:
+    let colorNames = ["Red", "Green", "Blue"];
+
+    // a.
+    let userColorBeginning = prompt("Enter a color to add to the beginning:");
+    colorNames.unshift(userColorBeginning);
+
+    // b.
+    let userColorEnd = prompt("Enter a color to add to the end:");
+    colorNames.push(userColorEnd);
+
+    // c.
+    colorNames.unshift("Yellow", "Orange");
+
+    // d.
+    colorNames.shift();
+
+    // e.
+    colorNames.pop();
+
+    // f.
+    let userIndex = prompt("Enter the index to add a color:");
+    let userColor = prompt("Enter the color to add:");
+    colorNames.splice(userIndex, 0, userColor);
+
+    // g.
+    let deleteIndex = prompt("Enter the index to delete colors:");
+    let deleteCount = prompt("Enter the number of colors to delete:");
+    colorNames.splice(deleteIndex, deleteCount);
+
+    document.write("<p>Updated Colors Array:</p>");
+    document.write(colorNames.join(", "));
+
+    // 10. Write a program to store student scores in an array & sort in ascending order:
+    let studentScores = [80, 65, 90, 75, 85];
+    studentScores.sort(function(a, b) {
+        return a - b;
+    });
+
+    document.write("<p>Sorted Student Scores:</p>");
+    document.write(studentScores.join(", "));
+
+    // 11. Write a program to initialize an array with city names and copy elements:
+    let cities = ["New York", "London", "Tokyo", "Paris", "Sydney"];
+    let selectedCities = cities.slice(1, 4);
+
+    document.write("<p>Selected Cities:</p>");
+    document.write(selectedCities.join(", "));
+
+    // 12. Create a single string from the array using the join method:
+    let arr = ["This", "is", "my", "cat"];
+    let singleString = arr.join(" ");
+    document.write("<p>Single String:</p>");
+    document.write(singleString);
+
+    // 13. Create a new array with FIFO order:
+    let fifoArray = [];
+    fifoArray.push("First");
+    fifoArray.push("Second");
+    fifoArray.push("Third");
+
+    document.write("<p>FIFO Array:</p>");
+    document.write(fifoArray.join(", "));
+
+    // 14. Create a new array with LIFO order:
+    let lifoArray = [];
+    lifoArray.unshift("First");
+    lifoArray.unshift("Second");
+    lifoArray.unshift("Third");
+
+    document.write("<p>LIFO Array:</p>");
+    document.write(lifoArray.join(", "));
+
+    // 15. Display phone manufacturers in a dropdown/select menu:
+    let phoneManufacturers = ["Apple", "Samsung", "Motorola", "Nokia", "Sony", "Haier"];
+
+    document.write("<p>Select Phone Manufacturer:</p>");
+    document.write("<select>");
+    for (let manufacturer of phoneManufacturers) {
+        document.write("<option value='" + manufacturer + "'>" + manufacturer + "</option>");
+    }
+    document.write("</select>");
+</script>
+
+</body>
+</html>
